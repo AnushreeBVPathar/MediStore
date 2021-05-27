@@ -355,3 +355,7 @@ section.register a:hover {
   border-radius: 50px !important;
   padding-left: 8px !important;
 }
+
+a.link {
+  color: #0d897f;
+}
