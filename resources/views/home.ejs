@@ -1,26 +1,26 @@
     <section class="hero">
-        <div class="container mx-auto flex items-center justify-between">
-            <div class="w-1/2">
+        <div class="container mx-auto flex items-center justify-between ">
+            <div class="w-1/2 temp">
                 <h6><em class="text-lg ml-6">Need Medicines?</em></h6>
-                <h1 class="text-6xl font-bold ml-6">Don't Wait !!</h1>
+                <h1 class="text-3xl md:text-6xl  font-bold ml-6">Don't Wait !</h1>
                 <button class="px-6 py-2 rounded-full text-white font-bold btn-primary ml-6 mt-4">Order Now</button>
             </div>
-            <div class="w-1/2 mb-6 mt-6">
-                <img src="/img/banner3.jpg" style="border-radius: 50%;height:420px; margin-left: 200px;">
+            <div class="w-1/2 mb-6 mt-6 temp">
+                <img src="/img/banner3.jpg" style="border-radius: 50%;height:420px;float: right;">
             </div>
         </div>
     </section>
 
     <section class="menu container mx-auto py-8 products">
     <h1 class="text-xl font-bold mb-8 ml-6">Avaiable Products</h1>
-    <div class="grid grid-cols-4 gap-y-6 gap-x-6 mb-6">
+    <div class="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-y-6 gap-x-6 mb-6">
         <% medicines.forEach(function(medicine) { %>
-            <div class="w-64">
+            <div class=" medi w-full md:w-64 ml-6">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%=medicine.image%>">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg "><%=medicine.name%></h2>
                     <span class="size py-1 px-4 rounded-full uppercase text-xs"><%=medicine.noofcapsule %> capsules</span>
-                    <div class="flex items-center justify-around mt-6">
+                    <div class="flex items-center justify-around mt-6 mb-2">
                         <span class="font-bold text-lg">₹ <%=medicine.price %></span>
                         <button data-medicine="<%= JSON.stringify(medicine)%>"  class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
                             <span>+</span>
@@ -34,3 +34,7 @@
    
     </div>
 </section>
+
+<footer>
+    <h6 class="foot mx-auto text-center text-bold p-4 w-full">&copy;2020 MediStore | All rights reserved</h6>
+</footer>

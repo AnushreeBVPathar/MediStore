@@ -12,8 +12,8 @@ const MongoDbStore =require('connect-mongo');
 const passport = require('passport');
 const Emitter = require('events');
 //Database connection
-const url ='mongodb://localhost/MediStore';
-mongoose.connect(url,{useNewUrlParser:true,useCreateIndex:true,useFindAndModify:true,useUnifiedTopology:true});
+
+mongoose.connect(process.env.MONGO_CONNECTION_URL,{useNewUrlParser:true,useCreateIndex:true,useFindAndModify:true,useUnifiedTopology:true});
 const connection=mongoose.connection;
 connection.once('open',()=>{
     console.log('Database connected..');
